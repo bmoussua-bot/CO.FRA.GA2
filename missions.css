@@ -1,0 +1,625 @@
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #020806;
+    color: #ffffff;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1150px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CURSEUR
+========================================================= */
+
+.cursor,
+.cursor-follower {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cursor {
+    width: 8px;
+    height: 8px;
+    background: #d4af37;
+}
+
+.cursor-follower {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #d4af37;
+    transition: transform 0.15s ease;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background: rgba(2, 8, 6, 0.95);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+
+    z-index: 1000;
+}
+
+.nav-logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.navbar nav a {
+    position: relative;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #ffffff;
+
+    transition: color 0.3s ease;
+}
+
+.navbar nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #d4af37;
+
+    transition: width 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #d4af37;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.section-label {
+    display: inline-block;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #d4af37;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.missions-hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 85px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #020806 0%,
+            #003b25 55%,
+            #020806 100%
+        );
+
+    color: #ffffff;
+}
+
+.missions-hero .container {
+    max-width: 1000px;
+}
+
+.missions-hero h1 {
+    max-width: 900px;
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+
+    color: #ffffff;
+}
+
+.missions-hero h1 span {
+    color: #d4af37;
+}
+
+.missions-hero p {
+    max-width: 750px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.section {
+    padding: 120px 0;
+}
+
+.missions-introduction {
+    background: #020806;
+}
+
+.section-heading {
+    max-width: 850px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 60px);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    color: #ffffff;
+}
+
+.section-heading h2::first-letter {
+    color: #d4af37;
+}
+
+.section-heading p {
+    max-width: 700px;
+
+    font-size: 18px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   MISSIONS
+========================================================= */
+
+.mission-section {
+    position: relative;
+
+    padding: 120px 0;
+
+    background: #003b25;
+
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.mission-section.alternate {
+    background: #020806;
+}
+
+.mission-content {
+    max-width: 850px;
+
+    position: relative;
+
+    padding-left: 100px;
+
+    transition: transform 0.4s ease;
+}
+
+.mission-content:hover {
+    transform: translateX(8px);
+}
+
+
+/* =========================================================
+   NUMÉROS DES MISSIONS
+========================================================= */
+
+.mission-number {
+    position: absolute;
+
+    left: 0;
+    top: -10px;
+
+    font-size: 55px;
+
+    font-weight: 700;
+
+    color: #d4af37;
+}
+
+
+/* =========================================================
+   TITRES DES MISSIONS
+========================================================= */
+
+.mission-content h2 {
+    font-size: clamp(35px, 5vw, 58px);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    color: #ffffff;
+}
+
+.mission-content p {
+    max-width: 750px;
+
+    font-size: 18px;
+
+    color: #ffffff;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   LISTES
+========================================================= */
+
+.mission-content ul {
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.mission-content li {
+    position: relative;
+
+    padding-left: 30px;
+
+    font-size: 16px;
+
+    color: #ffffff;
+}
+
+.mission-content li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 10px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #d4af37;
+}
+
+
+/* =========================================================
+   HOVER MISSIONS
+========================================================= */
+
+.mission-content:hover .mission-number {
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+
+/* =========================================================
+   DEVISE
+========================================================= */
+
+.missions-vision {
+    padding: 140px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #003b25,
+            #020806
+        );
+
+    color: #ffffff;
+}
+
+.vision-box {
+    text-align: center;
+}
+
+.vision-box .section-label {
+    color: #d4af37;
+}
+
+.vision-box h2 {
+    font-size: clamp(40px, 6vw, 75px);
+
+    line-height: 1.1;
+
+    color: #ffffff;
+}
+
+.vision-box h2 span {
+    color: #d4af37;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 40px 0;
+
+    background: #020806;
+
+    color: #ffffff;
+
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+footer .container {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+footer p {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.mission-section,
+.section-heading,
+.missions-vision {
+    animation: fadeUp 1s ease both;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLETTE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .navbar nav {
+        gap: 20px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .missions-hero {
+        min-height: 80vh;
+    }
+
+    .mission-content {
+        padding-left: 80px;
+    }
+
+    .mission-number {
+        font-size: 45px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+        min-height: 75px;
+
+        flex-direction: column;
+
+        padding: 15px 20px;
+
+        gap: 12px;
+    }
+
+    .nav-logo img {
+        width: 85px;
+    }
+
+    .navbar nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .missions-hero {
+        min-height: 85vh;
+
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+
+    .missions-hero h1 {
+        font-size: 48px;
+    }
+
+    .missions-hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+    .mission-section {
+        padding: 80px 0;
+    }
+
+    .mission-content {
+        padding-left: 0;
+    }
+
+    .mission-number {
+        position: static;
+
+        display: block;
+
+        font-size: 40px;
+
+        margin-bottom: 10px;
+    }
+
+    .mission-content h2 {
+        font-size: 38px;
+    }
+
+    .mission-content p {
+        font-size: 16px;
+    }
+
+    .mission-content li {
+        font-size: 15px;
+    }
+
+    .missions-vision {
+        padding: 90px 0;
+    }
+
+    .vision-box h2 {
+        font-size: 42px;
+    }
+
+    footer .container {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .cursor,
+    .cursor-follower {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   PETITS ÉCRANS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .missions-hero h1 {
+        font-size: 40px;
+    }
+
+    .mission-content h2 {
+        font-size: 32px;
+    }
+
+    .vision-box h2 {
+        font-size: 35px;
+    }
+}

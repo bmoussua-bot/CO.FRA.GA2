@@ -1,0 +1,586 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #012f10;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background: linear-gradient(
+        135deg,
+        #075d37 0%,
+        #003b25 35%,
+        #020806 85%
+    );
+    border-bottom: 1px solid rgba(1, 62, 17, 0.907);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #d8b45a;
+}
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #d8b45a;
+    transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   LABELS
+========================================= */
+
+.section-label {
+    display: inline-block;
+    color: #d8b45a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   HERO À PROPOS
+========================================= */
+
+.about-hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            135deg,
+            #075d37 0%,
+            #003b25 35%,
+            #020806 85%
+        );
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(216, 180, 90, 0.08);
+    border-radius: 50%;
+    filter: blur(80px);
+    right: -150px;
+    top: -100px;
+}
+
+.about-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero h1 {
+    max-width: 800px;
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 1.05;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.about-hero h1 span {
+    color: #d8b45a;
+}
+
+.about-hero p {
+    max-width: 650px;
+    font-size: 19px;
+    color: #c8c8d0;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+    padding: 100px 0;
+}
+
+
+/* =========================================
+   QUI SOMMES-NOUS
+========================================= */
+
+.about-introduction {
+    background:
+        linear-gradient(
+            135deg,
+            #075d37 0%,
+            #003b25 35%,
+            #020806 85%
+        );
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.about-heading h2,
+.section-heading h2,
+.location-box h2,
+.document-card h2 {
+    font-size: clamp(32px, 4vw, 55px);
+    line-height: 1.15;
+    margin-bottom: 30px;
+}
+
+.about-description {
+    color: #c7c7d0;
+    font-size: 17px;
+}
+
+.about-description p {
+    margin-bottom: 25px;
+}
+
+.about-description strong {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   IDENTITÉ
+========================================= */
+
+.about-identity {
+    background:
+        linear-gradient(
+            135deg,
+            #075d37 0%,
+            #003b25 35%,
+            #020806 85%
+        );
+}
+
+.section-heading {
+    max-width: 800px;
+    margin-bottom: 60px;
+}
+
+.identity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.identity-card {
+    min-height: 240px;
+    padding: 35px;
+    background:
+        linear-gradient(
+            135deg,
+            #075d37 0%,
+            #003b25 35%,
+            #020806 85%
+        );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.identity-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(216, 180, 90, 0.5);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.identity-number {
+    display: block;
+    color: #d8b45a;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.identity-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.identity-card p {
+    color: #bdbdc7;
+    font-size: 16px;
+}
+
+.identity-card .motto {
+    color: #d8b45a;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* =========================================
+   SIÈGE
+========================================= */
+
+.about-location {
+    background:
+        linear-gradient(
+            135deg,
+            #075d37 0%,
+            #003b25 35%,
+            #020806 85%
+        );
+}
+
+.location-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 70px;
+    background:
+        linear-gradient(
+            135deg,
+            #075d37 0%,
+            #003b25 35%,
+            #020806 85%
+        );
+    border-radius: 20px;
+    border: 1px solid rgba(216, 180, 90, 0.2);
+}
+
+.location-box h2 span {
+    color: #d8b45a;
+}
+
+.location-details {
+    min-width: 300px;
+    border-left: 2px solid #d8b45a;
+    padding-left: 30px;
+}
+
+.location-details p {
+    color: #c7c7d0;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   OBJET
+========================================= */
+
+.about-object {
+    background:
+        linear-gradient(
+            135deg,
+            #075d37 0%,
+            #003b25 35%,
+            #020806 85%
+        );
+}
+
+.about-object .section-heading {
+    max-width: 900px;
+}
+
+.about-object .section-heading p {
+    color: #c7c7d0;
+    font-size: 18px;
+    max-width: 800px;
+}
+
+
+/* =========================================
+   DOCUMENT / TRANSPARENCE
+========================================= */
+
+.about-document {
+    background:
+        linear-gradient(
+            135deg,
+            #075d37 0%,
+            #003b25 35%,
+            #020806 85%
+        );
+}
+
+.document-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px;
+    background:
+        linear-gradient(
+            135deg,
+            #075d37 0%,
+            #003b25 35%,
+            #020806 85%
+        );
+    border-radius: 20px;
+    border: 1px solid rgba(216, 180, 90, 0.25);
+}
+
+.document-card h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.document-card p {
+    color: #bdbdc7;
+}
+
+
+/* =========================================
+   BOUTON
+========================================= */
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-gold {
+    background: #d8b45a;
+    color: #ffffff;
+}
+
+.btn-gold:hover {
+    background: #ffffff;
+    color: #003b25;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 35px 0;
+    background:
+        linear-gradient(
+            135deg,
+            #075d37 0%,
+            #003b25 35%,
+            #020806 85%
+        );
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer p {
+    color: #9999a5;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CURSEUR
+========================================= */
+
+.cursor,
+.cursor-follower {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.cursor {
+    width: 8px;
+    height: 8px;
+    background: #d8b45a;
+    border-radius: 50%;
+}
+
+.cursor-follower {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #d8b45a;
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLETTE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        gap: 18px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .location-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .location-details {
+        border-left: none;
+        border-top: 2px solid #d8b45a;
+        padding-left: 0;
+        padding-top: 25px;
+        width: 100%;
+    }
+
+    .document-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+        min-height: 75px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navbar nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .about-hero {
+        min-height: 65vh;
+    }
+
+    .about-hero h1 {
+        font-size: 45px;
+    }
+
+    .about-hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .identity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .identity-card {
+        min-height: auto;
+    }
+
+    .location-box {
+        padding: 35px 25px;
+    }
+
+    .document-card {
+        padding: 35px 25px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cursor,
+    .cursor-follower {
+        display: none;
+    }
+}

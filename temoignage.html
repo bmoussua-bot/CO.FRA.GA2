@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Témoignages | CO.FRA.GA</title>
+    <link rel="stylesheet" href="temoignage.css">
+</head>
+
+<body>
+
+    <!-- Curseur -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="acceuil.html" class="logo">
+            <img src="assets/images/logo cofraga.png" alt="Logo CO.FRA.GA">
+        </a>
+
+        <nav class="navigation">
+
+            <a href="acceuil.html">Accueil</a>
+
+            <a href="apropos.html">À propos</a>
+
+            <a href="missions.html">Missions</a>
+
+            <a href="localisation.html">Localisation</a>
+
+            <a href="temoignage.html" class="active">Témoignages</a>
+
+            <a href="gouvernance.html">Gouvernance</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Section principale -->
+    <main>
+
+        <!-- Témoignages existants -->
+        <section class="temoignages">
+
+            <div class="section-title">
+
+                <span class="label">TÉMOIGNAGES</span>
+
+                <h1>
+                    La parole à
+                    <span>notre communauté</span>
+                </h1>
+
+                <p>
+                    Découvrez les témoignages de celles et ceux
+                    qui ont été accompagnés par la CO.FRA.GA.
+                </p>
+
+            </div>
+
+
+            <div class="temoignages-grid">
+
+                <!-- Témoignage 1 -->
+                <article class="temoignage-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p class="quote">
+                        « Grâce à la CO.FRA.GA, j'ai pu bénéficier
+                        d'un accompagnement qui m'a beaucoup aidée
+                        dans mon parcours. »
+                    </p>
+
+                    <div class="person">
+
+                        <div class="person-icon">
+                            M
+                        </div>
+
+                        <div>
+                            <h3>Marie</h3>
+                            <p>Bénéficiaire</p>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Témoignage 2 -->
+                <article class="temoignage-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p class="quote">
+                        « Une initiative importante pour notre
+                        communauté. J'ai particulièrement apprécié
+                        l'écoute et la disponibilité de l'équipe. »
+                    </p>
+
+                    <div class="person">
+
+                        <div class="person-icon">
+                            J
+                        </div>
+
+                        <div>
+                            <h3>Jean</h3>
+                            <p>Bénéficiaire</p>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Témoignage 3 -->
+                <article class="temoignage-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p class="quote">
+                        « La CO.FRA.GA contribue réellement à créer
+                        des opportunités et à rapprocher les personnes
+                        autour de projets utiles. »
+                    </p>
+
+                    <div class="person">
+
+                        <div class="person-icon">
+                            G
+                        </div>
+
+                        <div>
+                            <h3>Grâce</h3>
+                            <p>Participant</p>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Témoignage 4 -->
+                <article class="temoignage-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p class="quote">
+                        « Une belle expérience humaine. Merci à toute
+                        l'équipe pour son engagement auprès des
+                        communautés. »
+                    </p>
+
+                    <div class="person">
+
+                        <div class="person-icon">
+                            P
+                        </div>
+
+                        <div>
+                            <h3>Patrick</h3>
+                            <p>Participant</p>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Formulaire de témoignage -->
+        <section class="partage">
+
+            <div class="partage-container">
+
+                <div class="partage-text">
+
+                    <span class="label">VOTRE EXPÉRIENCE</span>
+
+                    <h2>
+                        Partagez votre
+                        <span>témoignage</span>
+                    </h2>
+
+                    <p>
+                        Votre expérience compte. Partagez votre histoire
+                        avec la communauté et contribuez à faire connaître
+                        les actions de la CO.FRA.GA.
+                    </p>
+
+                </div>
+
+
+                <form class="temoignage-form">
+
+                    <div class="form-group">
+
+                        <label for="nom">Nom et prénom</label>
+
+                        <input
+                            type="text"
+                            id="nom"
+                            name="nom"
+                            placeholder="Votre nom et prénom"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">Adresse email</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Votre adresse email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="temoignage">
+                            Votre témoignage
+                        </label>
+
+                        <textarea
+                            id="temoignage"
+                            name="temoignage"
+                            rows="6"
+                            placeholder="Écrivez votre témoignage ici..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button type="submit">
+                        Envoyer mon témoignage
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Curseur -->
+    <script>
+
+        const cursor = document.querySelector(".cursor");
+        const follower = document.querySelector(".cursor-follower");
+
+        document.addEventListener("mousemove", function(event) {
+
+            cursor.style.left = event.clientX + "px";
+            cursor.style.top = event.clientY + "px";
+
+            follower.style.left = event.clientX + "px";
+            follower.style.top = event.clientY + "px";
+
+        });
+
+    </script>
+
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>
